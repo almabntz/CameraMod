@@ -27,6 +27,10 @@ public final class CameraManager {
     public CameraPath getActivePath() { return activePath; }
     public void setActivePath(CameraPath path) { this.activePath = path;}
 
+    public void createNewPath(String name) {
+        activePath = new CameraPath(name);
+    }
+
     public boolean play() {
         if (activePath == null) {
             return false;
